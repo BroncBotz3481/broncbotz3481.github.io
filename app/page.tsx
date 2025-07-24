@@ -60,7 +60,7 @@ export default function App() {
 
       <footer className="bg-slate-800 text-white text-center py-10 mt-20">
         <div className="container mx-auto max-w-6xl px-5">
-          <p>&copy; 2024 Bronc Botz. All rights reserved.</p>
+          <p>© 2025 Bronc Botz. All rights reserved.</p>
           <div className="flex justify-center gap-8 mt-5 flex-wrap">
             <button onClick={() => navigateTo("home")} className="text-slate-300 hover:text-white transition-colors">
               Home

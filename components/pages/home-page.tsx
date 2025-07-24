@@ -9,12 +9,6 @@ export default function HomePage() {
           A student-led robotics team competing in FIRST Tech Challenge and FIRST Robotics Competition based in San
           Antonio, Texas since 2009.
         </p>
-
-        <div className="mb-12">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all hover:scale-105 shadow-lg">
-            👍 Like 450
-          </button>
-        </div>
       </section>
 
       <section className="mb-16">

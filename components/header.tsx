@@ -26,7 +26,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto max-w-6xl px-5">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 my-0 mb-7">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">🐎</span>
