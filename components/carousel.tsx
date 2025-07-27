@@ -1,75 +1,97 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-const slides = [
-  { src: "/placeholder.svg?height=400&width=700", alt: "Team working on robot" },
-  { src: "/placeholder.svg?height=400&width=700", alt: "Competition arena" },
-  { src: "/placeholder.svg?height=400&width=700", alt: "Team photo" },
-  { src: "/placeholder.svg?height=400&width=700", alt: "Robot mechanism" },
-]
+interface CarouselImage {
+  src: string
+  alt: string
+  caption?: string
+}
 
-export default function Carousel() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+interface CarouselProps {
+  images: CarouselImage[]
+  autoPlay?: boolean
+  autoPlayInterval?: number
+}
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const previousSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+export default function Carousel({ images, autoPlay = true, autoPlayInterval = 5000 }: CarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000)
+    if (!autoPlay) return
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, autoPlayInterval)
+
     return () => clearInterval(interval)
-  }, [])
+  }, [autoPlay, autoPlayInterval, images.length])
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") previousSlide()
-      if (e.key === "ArrowRight") nextSlide()
-    }
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+  }
 
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [])
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  if (images.length === 0) return null
 
   return (
-    <div className="relative max-w-4xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl">
-      <div className="relative h-96">
-        {slides.map((slide, index) => (
+    <div className="relative w-full h-80 overflow-hidden rounded-xl bg-slate-100 shadow-sm border border-orange-100">
+      {/* Images */}
+      <div className="relative h-full">
+        {images.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-500 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
+              index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide.src || "/placeholder.svg"} alt={slide.alt} className="w-full h-full object-cover" />
+            <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+            {image.caption && (
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                <p className="text-sm md:text-base">{image.caption}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      <button
-        onClick={previousSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-2xl shadow-lg transition-all hover:scale-110"
+      {/* Navigation Arrows */}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-slate-800 h-8 w-8"
+        onClick={goToPrevious}
       >
-        ‹
-      </button>
+        <ChevronLeft className="h-4 w-4" />
+      </Button>
 
-      <button
-        onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-2xl shadow-lg transition-all hover:scale-110"
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-slate-800 h-8 w-8"
+        onClick={goToNext}
       >
-        ›
-      </button>
+        <ChevronRight className="h-4 w-4" />
+      </Button>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
+      {/* Dots Indicator */}
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1">
+        {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? "bg-white" : "bg-white/50"}`}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentIndex ? "bg-white" : "bg-white bg-opacity-50"
+            }`}
+            onClick={() => goToSlide(index)}
           />
         ))}
       </div>

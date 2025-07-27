@@ -1,10 +1,12 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: "BroncBotz - FIRST Robotics Team",
+  description:
+    "Student-led robotics team competing in FIRST Tech Challenge and FIRST Robotics Competition based in San Antonio, Texas since 2009.",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({

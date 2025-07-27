@@ -1,50 +1,214 @@
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Users, Target, Award, Heart, Lightbulb, Handshake } from "lucide-react"
+
 export default function AboutPage() {
+  const values = [
+    {
+      icon: Target,
+      title: "Excellence",
+      description: "We strive for excellence in everything we do, from robot design to community outreach.",
+    },
+    {
+      icon: Users,
+      title: "Teamwork",
+      description: "Success comes through collaboration, communication, and supporting one another.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "We embrace creative thinking and innovative solutions to complex challenges.",
+    },
+    {
+      icon: Heart,
+      title: "Passion",
+      description: "Our love for robotics and STEM drives us to push boundaries and inspire others.",
+    },
+    {
+      icon: Handshake,
+      title: "Gracious Professionalism",
+      description: "We compete with respect, helping others while pursuing victory with honor.",
+    },
+    {
+      icon: Award,
+      title: "Continuous Learning",
+      description: "Every challenge is an opportunity to grow, learn, and become better engineers and people.",
+    },
+  ]
+
+  const timeline = [
+    {
+      year: "2009",
+      title: "Team Founded",
+      description: "BroncBotz was established as a FIRST Robotics team in San Antonio, Texas.",
+    },
+    {
+      year: "2012",
+      title: "First Regional Win",
+      description: "Achieved our first regional championship, marking a major milestone.",
+    },
+    {
+      year: "2015",
+      title: "Expanded Programs",
+      description: "Added FTC and community outreach programs to inspire younger students.",
+    },
+    {
+      year: "2018",
+      title: "New Workshop",
+      description: "Moved to our current state-of-the-art workshop facility.",
+    },
+    {
+      year: "2020",
+      title: "Virtual Innovation",
+      description: "Adapted to virtual competitions and remote collaboration during the pandemic.",
+    },
+    {
+      year: "2024",
+      title: "15 Years Strong",
+      description: "Celebrating 15 years of inspiring students and building amazing robots.",
+    },
+  ]
+
   return (
-    <>
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-slate-800 mb-4">About Bronc Botz</h1>
-        <p className="text-xl text-slate-600">Learn more about our team's history, mission, and achievements</p>
-      </div>
-
-      <div className="bg-white rounded-xl p-10 shadow-lg mb-8">
-        <h2 className="text-2xl font-semibold text-slate-800 mb-6">Our Story</h2>
-        <p className="text-lg text-slate-600 leading-relaxed mb-8">
-          Founded in 2009, Bronc Botz has been inspiring students in San Antonio, Texas to pursue careers in Science,
-          Technology, Engineering, and Mathematics (STEM). Our team participates in both FIRST Tech Challenge (FTC) and
-          FIRST Robotics Competition (FRC), providing students with hands-on experience in engineering, programming, and
-          project management.
+    <div className="space-y-10">
+      {/* Header Section */}
+      <section className="text-center space-y-4">
+        <Badge className="bg-orange-100 text-orange-800 border-orange-200 px-3 py-1">About BroncBotz</Badge>
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-800">Our Story</h1>
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          For over 15 years, BroncBotz has been inspiring students to pursue careers in STEM through hands-on robotics
+          experience, mentorship, and community engagement.
         </p>
+      </section>
 
-        <h2 className="text-2xl font-semibold text-slate-800 mb-6">Our Mission</h2>
-        <p className="text-lg text-slate-600 leading-relaxed mb-8">
-          To inspire young people to be science and technology leaders by engaging them in exciting mentor-based
-          programs that build science, engineering, and technology skills, that inspire innovation, and that foster
-          well-rounded life capabilities including self-confidence, communication, and leadership.
-        </p>
+      {/* Mission & Vision */}
+      <section className="grid md:grid-cols-2 gap-6">
+        <Card className="border-orange-100 hover:shadow-md transition-all duration-200">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-xl text-orange-600">Our Mission</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-slate-600 leading-relaxed">
+              To inspire and prepare students to become the next generation of STEM leaders through competitive
+              robotics, hands-on learning, and community service. We believe in fostering innovation, creativity, and
+              technical excellence while building character and leadership skills.
+            </p>
+          </CardContent>
+        </Card>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-all">
-            <h3 className="text-xl font-semibold text-slate-800 mb-4">🏆 Achievements</h3>
+        <Card className="border-orange-100 hover:shadow-md transition-all duration-200">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-xl text-orange-600">Our Vision</CardTitle>
+          </CardHeader>
+          <CardContent>
             <p className="text-slate-600 leading-relaxed">
-              Multiple regional championships, state qualifications, and numerous awards for design, innovation, and
-              community outreach.
+              To be a leading robotics program that transforms students into confident, capable, and compassionate
+              leaders who use their STEM skills to make a positive impact on their communities and the world.
             </p>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-all">
-            <h3 className="text-xl font-semibold text-slate-800 mb-4">🎓 Alumni Success</h3>
-            <p className="text-slate-600 leading-relaxed">
-              Our graduates have gone on to pursue engineering degrees at top universities and successful careers in
-              technology.
-            </p>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-all">
-            <h3 className="text-xl font-semibold text-slate-800 mb-4">🤝 Community Impact</h3>
-            <p className="text-slate-600 leading-relaxed">
-              Over 1000 hours of community service and STEM outreach to local schools and organizations.
-            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Core Values */}
+      <section className="space-y-6">
+        <div className="text-center space-y-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Our Core Values</h2>
+          <p className="text-slate-600 max-w-xl mx-auto">
+            These values guide everything we do, from how we design our robots to how we interact with our community.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {values.map((value, index) => (
+            <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">
+              <CardHeader className="text-center pb-3">
+                <div className="inline-flex p-3 bg-orange-100 rounded-full mx-auto mb-2">
+                  <value.icon className="h-6 w-6 text-orange-600" />
+                </div>
+                <CardTitle className="text-lg text-slate-800">{value.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <p className="text-slate-600 text-center text-sm leading-relaxed">{value.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Team History Timeline */}
+      <section className="space-y-6">
+        <div className="text-center space-y-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Our Journey</h2>
+          <p className="text-slate-600 max-w-xl mx-auto">
+            From humble beginnings to regional champions, here's how BroncBotz has grown over the years.
+          </p>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-orange-200 hidden md:block"></div>
+
+          <div className="space-y-6">
+            {timeline.map((event, index) => (
+              <div
+                key={index}
+                className={`flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+              >
+                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-6" : "md:pl-6"}`}>
+                  <Card className="border-orange-100 hover:shadow-md transition-all duration-200">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center space-x-3">
+                        <Badge className="bg-orange-600 text-white text-sm">{event.year}</Badge>
+                        <CardTitle className="text-lg text-slate-800">{event.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-slate-600 text-sm">{event.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Timeline dot */}
+                <div className="hidden md:block w-3 h-3 bg-orange-600 rounded-full border-2 border-white shadow-sm z-10"></div>
+
+                <div className="w-full md:w-5/12"></div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* What Makes Us Special */}
+      <section className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 md:p-8">
+        <div className="text-center space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">What Makes Us Special</h2>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Student-Led</h3>
+              <p className="text-slate-600 text-sm">
+                Our team is entirely student-led, with members taking ownership of all aspects from design and
+                programming to marketing and outreach.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Inclusive Community</h3>
+              <p className="text-slate-600 text-sm">
+                We welcome students from all backgrounds and skill levels, providing mentorship and support to help
+                everyone succeed and grow.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Real-World Impact</h3>
+              <p className="text-slate-600 text-sm">
+                Beyond competitions, we actively engage with our community through STEM outreach, mentoring, and
+                volunteer work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
