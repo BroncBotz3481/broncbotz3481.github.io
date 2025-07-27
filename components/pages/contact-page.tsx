@@ -124,24 +124,6 @@ export default function ContactPage() {
         </p>
       </section>
 
-      {/* Contact Information Cards */}
-      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {contactInfo.map((info, index) => (
-          <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200 text-center">
-            <CardHeader className="pb-3">
-              <div className="inline-flex p-3 bg-orange-100 rounded-full mx-auto mb-2">
-                <info.icon className="h-5 w-5 text-orange-600" />
-              </div>
-              <CardTitle className="text-lg text-slate-800">{info.label}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-1 pt-0">
-              <p className="font-semibold text-slate-800 text-sm">{info.value}</p>
-              <p className="text-xs text-slate-600">{info.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
-
       {/* Contact Form and Team Contacts */}
       <section className="grid lg:grid-cols-2 gap-8">
         {/* Contact Form */}
@@ -263,7 +245,28 @@ export default function ContactPage() {
           </CardContent>
         </Card>
 
-        {/* Team Contacts */}
+        {/* Info Form */}
+        <Card className="border-orange-100">
+
+
+      {/* Contact Information Cards */}
+      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {contactInfo.map((info, index) => (
+          <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200 text-center">
+            <CardHeader className="pb-3">
+              <div className="inline-flex p-3 bg-orange-100 rounded-full mx-auto mb-2">
+                <info.icon className="h-5 w-5 text-orange-600" />
+              </div>
+              <CardTitle className="text-lg text-slate-800">{info.label}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-1 pt-0">
+              <p className="font-semibold text-slate-800 text-sm">{info.value}</p>
+              <p className="text-xs text-slate-600">{info.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+        </Card>
         
       </section>
 
