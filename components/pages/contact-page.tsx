@@ -76,33 +76,6 @@ export default function ContactPage() {
     },
   ]
 
-  const teamContacts = [
-    {
-      name: "Alex Rodriguez",
-      role: "Team Captain",
-      email: "captain@broncbotz.example.com",
-      responsibilities: ["General inquiries", "Team leadership", "Competition coordination"],
-    },
-    {
-      name: "Dr. Jennifer Martinez",
-      role: "Lead Mentor",
-      email: "mentor@broncbotz.example.com",
-      responsibilities: ["Technical questions", "Mentorship program", "Educational partnerships"],
-    },
-    {
-      name: "Emma Davis",
-      role: "Outreach Coordinator",
-      email: "outreach@broncbotz.example.com",
-      responsibilities: ["Community events", "School visits", "Media inquiries"],
-    },
-    {
-      name: "Marcus Johnson",
-      role: "Sponsorship Manager",
-      email: "sponsors@broncbotz.example.com",
-      responsibilities: ["Sponsorship opportunities", "Business partnerships", "Fundraising"],
-    },
-  ]
-
   const inquiryTypes = [
     { value: "general", label: "General Information" },
     { value: "joining", label: "Joining the Team" },
@@ -280,3 +253,4 @@ return (
     </section>
   </div>
 )
+}
