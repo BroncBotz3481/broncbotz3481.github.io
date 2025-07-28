@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, Target, Award, Heart, Lightbulb, Handshake } from "lucide-react"
+import { Users, Target, Award, Heart, Lightbulb, Handshake, Instagram, Facebook, Youtube } from "lucide-react"
 
 export default function AboutPage() {
   const values = [
@@ -101,6 +101,54 @@ export default function AboutPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Follow Us Section */}
+      <section className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 md:p-8">
+        <div className="text-center space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Follow Us!</h2>
+          <p className="text-slate-600 max-w-xl mx-auto">
+            Stay connected with BroncBotz and follow our robotics journey on social media.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
+            <a
+              href="https://instagram.com/broncbotz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
+            >
+              <div className="p-2 bg-white rounded-full shadow-sm">
+                <Instagram className="h-5 w-5" />
+              </div>
+              <span className="font-medium">@broncbotz</span>
+            </a>
+
+            <a
+              href="https://facebook.com/Bronc.Botz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
+            >
+              <div className="p-2 bg-white rounded-full shadow-sm">
+                <Facebook className="h-5 w-5" />
+              </div>
+              <span className="font-medium">facebook.com/Bronc.Botz</span>
+            </a>
+
+            <a
+              href="https://youtube.com/@BHSBroncBotz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
+            >
+              <div className="p-2 bg-white rounded-full shadow-sm">
+                <Youtube className="h-5 w-5" />
+              </div>
+              <span className="font-medium">@BHSBroncBotz</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
