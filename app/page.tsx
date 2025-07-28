@@ -71,7 +71,7 @@ export default function Page() {
               </div>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Student-led robotics team competing in FIRST Tech Challenge and FIRST Robotics Competition based in San
-                Antonio, Texas since 2009.
+                Antonio, Texas since 2011.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ export default function Page() {
           </div>
 
           <div className="border-t border-slate-700 mt-6 pt-4 text-center text-xs text-slate-400">
-            <p>&copy; 2024 BroncBotz FIRST Robotics Team. All rights reserved.</p>
+            <p>&copy; 2025 BroncBotz FIRST Robotics Team. All rights reserved.</p>
           </div>
         </div>
       </footer>

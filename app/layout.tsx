@@ -5,7 +5,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "BroncBotz - FIRST Robotics Team",
   description:
-    "Student-led robotics team competing in FIRST Tech Challenge and FIRST Robotics Competition based in San Antonio, Texas since 2009.",
+    "Student-led robotics team competing in FIRST Tech Challenge and FIRST Robotics Competition based in San Antonio, Texas since 2011.",
   generator: "v0.dev",
 }
 
