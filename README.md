@@ -67,3 +67,9 @@ To add new pages:
 3. The router will automatically handle the new route
 
 The application uses a simple but effective routing system that's perfect for GitHub Pages hosting while providing a modern SPA experience.
+
+# Run 
+- Run Prod (default):
+> docker-compose up --build
+- Run Dev (with hot reloads):
+> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
