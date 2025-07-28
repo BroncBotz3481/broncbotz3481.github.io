@@ -52,46 +52,102 @@ export default function SponsorsPage() {
 
   const currentSponsors = [
     {
-      name: "TechCorp Industries",
+      name: "Gene Haas Foundation",
       tier: "Platinum",
-      logo: "/placeholder.svg?height=100&width=200&text=TechCorp+Logo",
-      description: "Leading technology solutions provider supporting STEM education.",
-      website: "https://techcorp.example.com",
+      logo: "/logos/gene-haas-foundation.svg", // update with real logo path
+      description: "Supporting innovation and STEM education through generous grants.",
+      website: "https://www.genehaasfoundation.org/",
     },
     {
-      name: "San Antonio Engineering",
+      name: "Franks Manufacturing",
       tier: "Gold",
-      logo: "/placeholder.svg?height=100&width=200&text=SA+Engineering",
-      description: "Local engineering firm passionate about developing future engineers.",
-      website: "https://saengineering.example.com",
-    },
-    {
-      name: "Robotics Supply Co.",
-      tier: "Gold",
-      logo: "/placeholder.svg?height=100&width=200&text=Robotics+Supply",
-      description: "Specialized supplier of robotics components and materials.",
-      website: "https://roboticssupply.example.com",
-    },
-    {
-      name: "Community Bank",
-      tier: "Silver",
-      logo: "/placeholder.svg?height=100&width=200&text=Community+Bank",
-      description: "Supporting local education and community development.",
-      website: "https://communitybank.example.com",
-    },
-    {
-      name: "Local Manufacturing",
-      tier: "Silver",
-      logo: "/placeholder.svg?height=100&width=200&text=Local+Mfg",
-      description: "Providing manufacturing expertise and facility access.",
-      website: "https://localmfg.example.com",
-    },
-    {
-      name: "Parent Association",
-      tier: "Bronze",
-      logo: "/placeholder.svg?height=100&width=200&text=Parent+Assoc",
-      description: "Dedicated parents supporting our robotics program.",
+      logo: "/logos/franks-manufacturing.svg",
+      description: "Local manufacturing partner dedicated to advancing engineering programs.",
       website: "#",
+    },
+    {
+      name: "Brandeis Bronc Botz Booster Club",
+      tier: "Gold",
+      logo: "/logos/bronc-botz-booster.svg",
+      description: "Community booster club supporting student robotics teams.",
+      website: "#",
+    },
+    {
+      name: "Department of Defense",
+      tier: "Gold",
+      logo: "/logos/department-of-defense.svg",
+      description: "Federal support for STEM and robotics initiatives.",
+      website: "https://www.defense.gov/",
+    },
+    {
+      name: "Texas Workforce Commission",
+      tier: "Silver",
+      logo: "/logos/texas-workforce-commission.svg",
+      description: "Supporting workforce development through education partnerships.",
+      website: "https://twc.texas.gov/",
+    },
+    {
+      name: "3M",
+      tier: "Silver",
+      logo: "/logos/3m.svg",
+      description: "Global innovation company supporting STEM outreach.",
+      website: "https://www.3m.com/",
+    },
+    {
+      name: "National Instruments",
+      tier: "Silver",
+      logo: "/logos/national-instruments.svg",
+      description: "Provider of test, measurement, and control solutions.",
+      website: "https://www.ni.com/",
+    },
+    {
+      name: "FIRST-in-Texas",
+      tier: "Silver",
+      logo: "/logos/first-in-texas.svg",
+      description: "Local FIRST Robotics programs and community.",
+      website: "https://firstintexas.org/",
+    },
+    {
+      name: "SolidWorks",
+      tier: "Bronze",
+      logo: "/logos/solidworks.svg",
+      description: "3D design software supporting engineering education.",
+      website: "https://www.solidworks.com/",
+    },
+    {
+      name: "San Antonio Powder Coating",
+      tier: "Bronze",
+      logo: "/logos/san-antonio-powder-coating.svg",
+      description: "Providing high-quality coating services for team projects.",
+      website: "#",
+    },
+    {
+      name: "Printingblue.com",
+      tier: "Bronze",
+      logo: "/logos/printingblue.svg",
+      description: "Printing and design support for robotics events.",
+      website: "https://printingblue.com/",
+    },
+    {
+      name: "Dopp; Patlovany; Ghawghawe; Vijayakumar; Elizalde; Saikumar Families",
+      tier: "Bronze",
+      logo: "/logos/supporting-families.svg",
+      description: "Generous families supporting the team.",
+      website: "#",
+    },
+    {
+      name: "Ryobi Tools",
+      tier: "Bronze",
+      logo: "/logos/ryobi-tools.svg",
+      description: "Tool and equipment support for student engineers.",
+      website: "https://www.ryobitools.com/",
+    },
+    {
+      name: "Northside ISD & Brandeis High School",
+      tier: "Bronze",
+      logo: "/logos/northside-isd.svg",
+      description: "Educational institutions fostering STEM growth.",
+      website: "https://www.nisd.net/",
     },
   ]
 
@@ -99,7 +155,7 @@ export default function SponsorsPage() {
     { label: "Students Impacted", value: "200+", description: "Through our programs" },
     { label: "Community Events", value: "15", description: "Hosted annually" },
     { label: "STEM Workshops", value: "25", description: "For younger students" },
-    { label: "Competition Awards", value: "12", description: "In the last 3 years" },
+    { label: "Awards", value: "27", description: "And counting" },
   ]
 
   return (
@@ -141,7 +197,7 @@ export default function SponsorsPage() {
           {currentSponsors.map((sponsor, index) => (
             <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">
               <CardHeader className="text-center pb-3">
-                <div className="h-16 flex items-center justify-center mb-3 bg-white rounded-lg border">
+                <div className="h-16 flex items-center justify-center mb-2 bg-white">
                   <img
                     src={sponsor.logo || "/placeholder.svg"}
                     alt={`${sponsor.name} logo`}
@@ -150,19 +206,19 @@ export default function SponsorsPage() {
                 </div>
                 <CardTitle className="text-lg text-slate-800">{sponsor.name}</CardTitle>
                 <CardDescription>
-                  <Badge
-                    className={
-                      sponsor.tier === "Platinum"
-                        ? "bg-slate-100 text-slate-800 border-slate-200"
-                        : sponsor.tier === "Gold"
-                          ? "bg-yellow-100 text-yellow-800 border-yellow-200"
-                          : sponsor.tier === "Silver"
-                            ? "bg-gray-100 text-gray-800 border-gray-200"
-                            : "bg-orange-100 text-orange-800 border-orange-200"
-                    }
-                  >
-                    {sponsor.tier} Sponsor
-                  </Badge>
+                  {/*<Badge*/}
+                  {/*  className={*/}
+                  {/*    sponsor.tier === "Platinum"*/}
+                  {/*      ? "bg-slate-100 text-slate-800 border-slate-200"*/}
+                  {/*      : sponsor.tier === "Gold"*/}
+                  {/*        ? "bg-yellow-100 text-yellow-800 border-yellow-200"*/}
+                  {/*        : sponsor.tier === "Silver"*/}
+                  {/*          ? "bg-gray-100 text-gray-800 border-gray-200"*/}
+                  {/*          : "bg-orange-100 text-orange-800 border-orange-200"*/}
+                  {/*  }*/}
+                  {/*>*/}
+                  {/*  {sponsor.tier} Sponsor*/}
+                  {/*</Badge>*/}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-0">
@@ -192,29 +248,29 @@ export default function SponsorsPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {sponsorTiers.map((tier, index) => (
-            <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">
-              <CardHeader className="text-center pb-3">
-                <div className={`inline-flex p-3 rounded-full ${tier.color} mb-3`}>
-                  <tier.icon className="h-6 w-6" />
-                </div>
-                <CardTitle className="text-xl text-slate-800">{tier.tier}</CardTitle>
-                <CardDescription className="text-lg font-bold text-orange-600">{tier.amount}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3 pt-0">
-                <ul className="space-y-1">
-                  {tier.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-start space-x-2 text-xs">
-                      <div className="w-1 h-1 bg-orange-600 rounded-full mt-1.5 flex-shrink-0"></div>
-                      <span className="text-slate-600">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {/*<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">*/}
+        {/*  {sponsorTiers.map((tier, index) => (*/}
+        {/*    <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">*/}
+        {/*      <CardHeader className="text-center pb-3">*/}
+        {/*        <div className={`inline-flex p-3 rounded-full ${tier.color} mb-3`}>*/}
+        {/*          <tier.icon className="h-6 w-6" />*/}
+        {/*        </div>*/}
+        {/*        <CardTitle className="text-xl text-slate-800">{tier.tier}</CardTitle>*/}
+        {/*        <CardDescription className="text-lg font-bold text-orange-600">{tier.amount}</CardDescription>*/}
+        {/*      </CardHeader>*/}
+        {/*      <CardContent className="space-y-3 pt-0">*/}
+        {/*        <ul className="space-y-1">*/}
+        {/*          {tier.benefits.map((benefit, benefitIndex) => (*/}
+        {/*            <li key={benefitIndex} className="flex items-start space-x-2 text-xs">*/}
+        {/*              <div className="w-1 h-1 bg-orange-600 rounded-full mt-1.5 flex-shrink-0"></div>*/}
+        {/*              <span className="text-slate-600">{benefit}</span>*/}
+        {/*            </li>*/}
+        {/*          ))}*/}
+        {/*        </ul>*/}
+        {/*      </CardContent>*/}
+        {/*    </Card>*/}
+        {/*  ))}*/}
+        {/*</div>*/}
       </section>
 
       {/* Why Sponsor Us */}

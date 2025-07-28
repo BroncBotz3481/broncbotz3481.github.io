@@ -94,25 +94,18 @@ export default function TeamPage() {
 
   const mentors = [
     {
-      name: "Dr. Jennifer Martinez",
-      role: "Lead Mentor",
-      expertise: "Mechanical Engineering",
-      experience: "8 years with BroncBotz",
-      bio: "Professional engineer with expertise in robotics and automation systems.",
-    },
-    {
-      name: "Robert Kim",
-      role: "Programming Mentor",
-      expertise: "Software Development",
-      experience: "5 years with BroncBotz",
-      bio: "Senior software engineer specializing in embedded systems and robotics programming.",
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Business Mentor",
-      expertise: "Project Management",
+      name: "Vicky Powers",
+      role: "Head Coach",
+      expertise: "Team Management",
       experience: "3 years with BroncBotz",
-      bio: "Project manager with experience in team leadership and strategic planning.",
+      bio: "",
+    },
+    {
+      name: "Gabriel Guerrero",
+      role: "Systems Mentor",
+      expertise: "Design",
+      experience: "15 years with BroncBotz",
+      bio: "Senior software engineer specializing in embedded systems and robotics programming.",
     },
   ]
 
@@ -232,35 +225,35 @@ export default function TeamPage() {
       </section>
 
       {/* Mentors */}
-      <section className="space-y-6">
-        <div className="text-center space-y-3">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Our Mentors</h2>
-          <p className="text-slate-600 max-w-xl mx-auto">
-            Experienced professionals who guide our students, share their expertise, and help us achieve our goals both
-            in competition and in life.
-          </p>
-        </div>
+      {/*<section className="space-y-6">*/}
+      {/*  <div className="text-center space-y-3">*/}
+      {/*    <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Our Mentors</h2>*/}
+      {/*    <p className="text-slate-600 max-w-xl mx-auto">*/}
+      {/*      Experienced professionals who guide our students, share their expertise, and help us achieve our goals both*/}
+      {/*      in competition and in life.*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {mentors.map((mentor, index) => (
-            <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg text-slate-800">{mentor.name}</CardTitle>
-                <CardDescription className="space-y-1">
-                  <div className="font-semibold text-orange-600 text-sm">{mentor.role}</div>
-                  <div className="text-xs">{mentor.expertise}</div>
-                  <Badge variant="outline" className="text-xs">
-                    {mentor.experience}
-                  </Badge>
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-slate-600 text-sm">{mentor.bio}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+      {/*  <div className="grid md:grid-cols-3 gap-5">*/}
+      {/*    {mentors.map((mentor, index) => (*/}
+      {/*      <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">*/}
+      {/*        <CardHeader className="pb-3">*/}
+      {/*          <CardTitle className="text-lg text-slate-800">{mentor.name}</CardTitle>*/}
+      {/*          <CardDescription className="space-y-1">*/}
+      {/*            <div className="font-semibold text-orange-600 text-sm">{mentor.role}</div>*/}
+      {/*            <div className="text-xs">{mentor.expertise}</div>*/}
+      {/*            <Badge variant="outline" className="text-xs">*/}
+      {/*              {mentor.experience}*/}
+      {/*            </Badge>*/}
+      {/*          </CardDescription>*/}
+      {/*        </CardHeader>*/}
+      {/*        <CardContent className="pt-0">*/}
+      {/*          <p className="text-slate-600 text-sm">{mentor.bio}</p>*/}
+      {/*        </CardContent>*/}
+      {/*      </Card>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       {/* Join Us Section */}
       <section className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 md:p-8">

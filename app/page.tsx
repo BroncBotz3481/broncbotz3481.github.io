@@ -100,7 +100,7 @@ export default function Page() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-orange-400">Connect</h4>
               <div className="space-y-1 text-sm text-slate-300">
-                <p>📧 broncbotz@example.com</p>
+                <p>📧 contact@broncbotz.org</p>
                 <p>📱 Follow us on social media</p>
                 <p>🏫 San Antonio, Texas</p>
               </div>

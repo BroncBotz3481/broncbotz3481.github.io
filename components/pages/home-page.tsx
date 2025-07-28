@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Carousel from "@/components/carousel"
-import { Award, Puzzle, ChevronRight, Users, Trophy, Wrench, Calendar, Target, Lightbulb, Heart } from "lucide-react"
+import { Award, Puzzle, ChevronRight, Users, Trophy, Wrench, Calendar, Lightbulb, Heart } from "lucide-react"
 
 export default function HomePage() {
   const carouselImages = [
@@ -145,6 +145,36 @@ export default function HomePage() {
             that foster well-rounded life capabilities including self-confidence, communication, and leadership."
           </blockquote>
           <cite className="text-orange-600 font-semibold text-sm">— FIRST Robotics Mission</cite>
+        </div>
+      </section>
+
+      {/* What Makes Us Special */}
+      <section className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 md:p-8">
+        <div className="text-center space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">What Makes Us Special</h2>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Student-Led</h3>
+              <p className="text-slate-600 text-sm">
+                Our team is entirely student-led, with members taking ownership of all aspects from design and
+                programming to marketing and outreach.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Inclusive Community</h3>
+              <p className="text-slate-600 text-sm">
+                We welcome students from all backgrounds and skill levels, providing mentorship and support to help
+                everyone succeed and grow.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-orange-600">Real-World Impact</h3>
+              <p className="text-slate-600 text-sm">
+                Beyond competitions, we actively engage with our community through STEM outreach, mentoring, and
+                volunteer work.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
