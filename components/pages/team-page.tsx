@@ -8,7 +8,7 @@ import { Code, Wrench, Megaphone, DollarSign, Camera, Award, Mail, Users } from 
 export default function TeamPage() {
   const leadership = [
     {
-      name: "Alex Rodriguez",
+      name: "Name 1",
       role: "Team Captain",
       grade: "Senior",
       bio: "Leading the team for 2 years, passionate about mechanical design and team coordination.",
@@ -16,7 +16,7 @@ export default function TeamPage() {
       skills: ["Leadership", "Mechanical Design", "Project Management"],
     },
     {
-      name: "Sarah Chen",
+      name: "Name 2",
       role: "Lead Programmer",
       grade: "Junior",
       bio: "Expert in Java and Python, responsible for robot autonomous programming and vision systems.",
@@ -24,7 +24,7 @@ export default function TeamPage() {
       skills: ["Java", "Python", "Computer Vision", "Autonomous Systems"],
     },
     {
-      name: "Marcus Johnson",
+      name: "Name 3",
       role: "Chief Engineer",
       grade: "Senior",
       bio: "Oversees all engineering aspects, specializes in CAD design and manufacturing processes.",
@@ -32,7 +32,7 @@ export default function TeamPage() {
       skills: ["CAD Design", "Manufacturing", "3D Printing", "Engineering Analysis"],
     },
     {
-      name: "Emma Davis",
+      name: "Name 4",
       role: "Outreach Coordinator",
       grade: "Junior",
       bio: "Manages community outreach programs and coordinates with local schools and organizations.",
