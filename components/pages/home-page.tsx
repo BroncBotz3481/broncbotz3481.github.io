@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Carousel from "@/components/carousel"
-import { ChevronRight, Users, Trophy, Wrench, Calendar, Target, Lightbulb, Heart } from "lucide-react"
+import { Award, Puzzle, ChevronRight, Users, Trophy, Wrench, Calendar, Target, Lightbulb, Heart } from "lucide-react"
 
 export default function HomePage() {
   const carouselImages = [
@@ -31,32 +31,32 @@ export default function HomePage() {
   ]
 
   const stats = [
-    { icon: Users, label: "Active Members", value: "25+" },
-    { icon: Trophy, label: "Awards Won", value: "15+" },
-    { icon: Wrench, label: "Robots Built", value: "8" },
-    { icon: Calendar, label: "Years Active", value: "15+" },
+    { icon: Users, label: "Active Members", value: "30+" },
+    { icon: Trophy, label: "Awards Won", value: "25+" },
+    { icon: Wrench, label: "Robots Built", value: "30" },
+    { icon: Calendar, label: "Years Active", value: "15" },
   ]
 
   const highlights = [
     {
-      icon: Trophy,
-      title: "FIRST Robotics Competition",
+      icon: Award,
+      title: "FIRST Robotics Competition (FRC)",
       description:
-        "We compete annually in the FIRST Robotics Competition, designing and building robots to tackle complex challenges.",
+        "A challenging high-school level robotics competition where teams design, build, and program large robots to compete in complex games.",
+    },
+    {
+      icon: Puzzle,
+      title: "FIRST Tech Challenge (FTC)",
+      description:
+        "A creative and collaborative robotics challenge, focusing on designing smaller robots for strategic gameplay.",
     },
     {
       icon: Lightbulb,
       title: "STEM Education",
       description:
-        "Our team promotes STEM education through community outreach, mentoring younger students, and hosting workshops.",
+        "We foster STEM learning through community outreach, mentoring younger students, and hosting hands-on workshops.",
     },
-    {
-      icon: Target,
-      title: "Innovation & Design",
-      description:
-        "We focus on innovative engineering solutions, 3D printing, programming, and cutting-edge robotics technology.",
-    },
-  ]
+  ];
 
   return (
     <div className="space-y-10">
@@ -64,10 +64,10 @@ export default function HomePage() {
       <section className="text-center space-y-5">
         <div className="space-y-3">
           <Badge className="bg-orange-100 text-orange-800 border-orange-200 px-3 py-1">
-            Est. 2009 • San Antonio, Texas
+            Est. 2011 • San Antonio, Texas
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
-            Welcome to <span className="text-orange-600">BroncBotz</span>
+            Welcome to <span className="text-orange-600">BroncBotz 3481</span>
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             We are a student-led FIRST Robotics team dedicated to inspiring young minds through science, technology,
