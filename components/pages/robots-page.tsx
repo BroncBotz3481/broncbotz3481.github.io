@@ -18,11 +18,29 @@ interface Robot {
 
 const robots: Robot[] = [
   {
+    year: 2026,
+    gameName: "REBUILT",
+    robotName: "TBD",
+    description: "TBD",
+    achievements: ["TBD"],
+    keyFeatures: ["TBD"],
+    image: "/placeholder.svg?height=300&width=400&text=2025+Justice+Robot",
+  },
+  {
+    year: 2025,
+    gameName: "Reefscape",
+    robotName: "Justice",
+    description: "Justice stands for power. Built to rise to any challenge.",
+    achievements: ["TBD"],
+    keyFeatures: ["TBD"],
+    image: "/placeholder.svg?height=300&width=400&text=2025+Justice+Robot",
+  },
+  {
     year: 2024,
     gameName: "CRESCENDO",
-    robotName: "Harmony",
+    robotName: "Azula",
     description:
-      "Our 2024 robot designed for the CRESCENDO game, featuring precision note scoring and climbing capabilities.",
+        "Azula was built for CRESCENDO, a powerful scoring bot with elegant motion and effective endgame climbs.",
     achievements: ["Regional Finalist", "Engineering Inspiration Award"],
     keyFeatures: ["Precision shooter", "Climbing mechanism", "Autonomous navigation"],
     image: "/placeholder.svg?height=300&width=400&text=2024+CRESCENDO+Robot",
@@ -32,7 +50,7 @@ const robots: Robot[] = [
     gameName: "CHARGED UP",
     robotName: "Voltage",
     description:
-      "Built for the CHARGED UP challenge, this robot excels at manipulating cones and cubes with precision.",
+        "Built for the CHARGED UP challenge, this robot excels at manipulating cones and cubes with precision.",
     achievements: ["Regional Champions", "Innovation in Control Award"],
     keyFeatures: ["Dual-mode intake", "Telescoping arm", "Auto-balancing"],
     image: "/placeholder.svg?height=300&width=400&text=2023+CHARGED+UP+Robot",
@@ -41,7 +59,8 @@ const robots: Robot[] = [
     year: 2022,
     gameName: "RAPID REACT",
     robotName: "Velocity",
-    description: "Our RAPID REACT robot featuring a high-speed ball shooter and efficient climbing system.",
+    description:
+        "Our RAPID REACT robot featuring a high-speed ball shooter and efficient climbing system.",
     achievements: ["Regional Semi-Finalist", "Rookie All-Star Award"],
     keyFeatures: ["High-speed shooter", "Pneumatic climber", "Vision tracking"],
     image: "/placeholder.svg?height=300&width=400&text=2022+RAPID+REACT+Robot",
@@ -49,31 +68,104 @@ const robots: Robot[] = [
   {
     year: 2020,
     gameName: "INFINITE RECHARGE",
-    robotName: "Infinity",
-    description: "Designed for INFINITE RECHARGE, featuring power cell manipulation and generator switch activation.",
-    achievements: ["Regional Quarterfinalist", "Gracious Professionalism Award"],
-    keyFeatures: ["Power cell intake", "Color wheel spinner", "Climbing hook"],
+    robotName: "El Alacrán",
+    description:
+        "El Alacrán tackled INFINITE RECHARGE with a sleek design and strong scoring potential.",
+    achievements: ["Shutdown Short Season"],
+    keyFeatures: ["Power cell shooter", "Color spinner", "Climbing arms"],
     image: "/placeholder.svg?height=300&width=400&text=2020+INFINITE+RECHARGE+Robot",
   },
   {
     year: 2019,
     gameName: "DESTINATION: DEEP SPACE",
-    robotName: "Apollo",
-    description: "Our DESTINATION: DEEP SPACE robot with cargo and hatch panel manipulation capabilities.",
-    achievements: ["Regional Participant", "Team Spirit Award"],
-    keyFeatures: ["Cargo intake", "Hatch panel mechanism", "Level 2 climb"],
+    robotName: "Andromeda \"Andi\"",
+    description:
+        "Andi was designed for cargo and hatch manipulation under sandstorm conditions.",
+    achievements: ["Team Spirit Award"],
+    keyFeatures: ["Cargo intake", "Hatch panel claws", "Level 2 HAB climb"],
     image: "/placeholder.svg?height=300&width=400&text=2019+DEEP+SPACE+Robot",
   },
   {
     year: 2018,
     gameName: "POWER UP",
     robotName: "Surge",
-    description: "Built for POWER UP, featuring power cube manipulation and scale/switch scoring.",
+    description:
+        "Built for POWER UP, featuring power cube manipulation and scale/switch scoring.",
     achievements: ["Regional Quarterfinalist", "Safety Award"],
     keyFeatures: ["Power cube intake", "Elevator lift", "Scale scoring"],
     image: "/placeholder.svg?height=300&width=400&text=2018+POWER+UP+Robot",
   },
-]
+  {
+    year: 2017,
+    gameName: "STEAMWORKS",
+    robotName: "Orange Juice",
+    description:
+        "Built for STEAMWORKS, Orange Juice specialized in gear delivery and low-goal fuel scoring.",
+    achievements: ["Improved Autonomous", "Best Design Nominee"],
+    keyFeatures: ["Gear handler", "Low-goal shooter", "Active intake"],
+    image: "/placeholder.svg?height=300&width=400&text=2017+STEAMWORKS+Robot",
+  },
+  {
+    year: 2016,
+    gameName: "FIRST STRONGHOLD",
+    robotName: "Knightmare",
+    description:
+        "Our robot for FIRST STRONGHOLD, equipped for defense crossing and tower shooting.",
+    achievements: ["Award for Creative Design"],
+    keyFeatures: ["Strong drivetrain", "Low goal shooter", "Defense breaching"],
+    image: "/placeholder.svg?height=300&width=400&text=2016+STRONGHOLD+Robot",
+  },
+  {
+    year: 2015,
+    gameName: "RECYCLE RUSH",
+    robotName: "El Toro",
+    description:
+        "El Toro was built for RECYCLE RUSH, focusing on stacking totes and managing recycling containers.",
+    achievements: ["Efficient Stacker"],
+    keyFeatures: ["Tote stacker", "Can grabber", "Elevator mechanism"],
+    image: "/placeholder.svg?height=300&width=400&text=2015+RECYCLE+RUSH+Robot",
+  },
+  {
+    year: 2014,
+    gameName: "AERIAL ASSIST",
+    robotName: "Placeholder",
+    description:
+        "Competed in AERIAL ASSIST, focusing on cooperative ball passing and robust defense.",
+    achievements: ["Strong Defensive Play"],
+    keyFeatures: ["Large ball intake", "Assist-oriented design", "Robust frame"],
+    image: "/placeholder.svg?height=300&width=400&text=2014+AERIAL+ASSIST+Robot",
+  },
+  {
+    year: 2013,
+    gameName: "ULTIMATE ASCENT",
+    robotName: "Twister",
+    description:
+        "Designed for ULTIMATE ASCENT, Twister focused on quick disc shooting and moderate climbing ability.",
+    achievements: ["High Autonomous Accuracy"],
+    keyFeatures: ["Frisbee shooter", "Climbing hooks", "Autonomous routine"],
+    image: "/placeholder.svg?height=300&width=400&text=2013+ULTIMATE+ASCENT+Robot",
+  },
+  {
+    year: 2012,
+    gameName: "Rebound Rumble",
+    robotName: "Admiral II",
+    description:
+        "A basketball-shooting robot created for Rebound Rumble, featuring improved drivetrain control.",
+    achievements: ["Improved Scoring", "Team Growth"],
+    keyFeatures: ["Ball shooter", "Improved drivebase", "Feeder system"],
+    image: "/placeholder.svg?height=300&width=400&text=2012+Rebound+Rumble+Robot",
+  },
+  {
+    year: 2011,
+    gameName: "LOGO MOTION",
+    robotName: "Hiking Viking",
+    description:
+        "Our first robot, built for the LOGO MOTION challenge. It featured simple tube handling capabilities.",
+    achievements: ["Rookie Year", "Completed Qualification Rounds"],
+    keyFeatures: ["Basic arm", "Tube gripper", "Rolling drivetrain"],
+    image: "/placeholder.svg?height=300&width=400&text=2011+LOGO+MOTION+Robot",
+  },
+];
 
 export default function RobotsPage() {
   const [selectedRobot, setSelectedRobot] = useState<Robot | null>(null)
