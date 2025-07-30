@@ -1,75 +1,144 @@
-# Bronc Botz SPA Website
+# BroncBotz Robotics Team Website
 
-A modern Single Page Application (SPA) recreation of the BroncBotz robotics team website, designed for hosting on GitHub Pages.
+The official website for BroncBotz Team 3481, a FIRST Robotics Competition team from Brandeis High School in San Antonio, Texas.
+
+🌐 **Live Website**: [https://broncbotz.org](https://broncbotz.org)  
+📂 **GitHub Repository**: [https://github.com/BroncBotz3481/broncbotz3481.github.io](https://github.com/BroncBotz3481/broncbotz3481.github.io)
+
+## About
+
+This is a modern, responsive website built with Next.js that showcases our robotics team's journey, achievements, and community involvement. The site features information about our team members, robots, sponsors, and upcoming events.
 
 ## Features
 
-- **Single Page Application**: Smooth navigation without page reloads
-- **Responsive Design**: Works perfectly on all devices and screen sizes
-- **Interactive Carousel**: Showcases team photos and robots with navigation
-- **Multiple Pages**: Home, About, Team, Sponsors, and Contact sections
-- **Contact Form**: Functional contact form with validation
-- **Mobile Navigation**: Collapsible navigation menu for mobile devices
-- **Loading Animations**: Smooth transitions between pages
-- **GitHub Pages Ready**: All files optimized for static hosting
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Interactive Components**: Dynamic carousels, modals, and navigation
+- **Team Showcase**: Detailed information about team members and leadership
+- **Robot Gallery**: Historical overview of our competition robots (2018-2024)
+- **Sponsor Recognition**: Dedicated section highlighting our valued sponsors
+- **Contact Information**: Easy ways to get in touch with the team
+- **Social Media Integration**: Links to our Instagram, Facebook, and YouTube
 
 ## Pages
 
-1. **Home** - Hero section with carousel and team overview
-2. **About** - Team history, mission, and achievements
-3. **Team** - Student leadership and subteam information
-4. **Sponsors** - Sponsor recognition and sponsorship opportunities
-5. **Contact** - Contact information and inquiry form
+1. **Home** - Welcome section with team overview and highlights
+2. **About** - Team history, mission, achievements, and social media links
+3. **Team** - Student leadership, mentors, and subteam information
+4. **Robots** - Gallery of competition robots with detailed specifications
+5. **Sponsors** - Recognition of our sponsors and partnership opportunities
+6. **Contact** - Contact information and inquiry form
 
-## Technical Features
+## Deployment
 
-- Hash-based routing for GitHub Pages compatibility
-- Modular component architecture
-- Vanilla JavaScript (no external dependencies)
-- CSS Grid and Flexbox for responsive layouts
-- Smooth page transitions and loading states
-- Mobile-first responsive design
-- Accessible navigation and forms
+The website is automatically deployed to GitHub Pages using GitHub Actions:
 
-## Setup for GitHub Pages
+- **Deployment Branch**: `gh-pages`
+- **Trigger**: Automatic deployment on every push to the `main` branch
+- **Build Process**: Next.js static export optimized for GitHub Pages
+- **Custom Domain**: Configured to serve at [broncbotz.org](https://broncbotz.org)
 
-1. Create a new repository on GitHub
-2. Upload all files to the repository
-3. Go to Settings > Pages
-4. Select "Deploy from a branch" and choose "main"
-5. Your site will be available at `https://yourusername.github.io/repository-name`
+### Deployment Workflow
 
-## Customization
+1. Code changes are pushed to the `main` branch
+2. GitHub Actions automatically builds the Next.js application
+3. Static files are exported and deployed to the `gh-pages` branch
+4. Changes are live at [broncbotz.org](https://broncbotz.org) within minutes
 
-- Replace placeholder images with actual team photos
-- Update team member information and roles
-- Modify sponsor logos and information
-- Customize colors and styling in `styles.css`
-- Add new pages by extending the router in `app.js`
+## Development Setup
 
-## File Structure
+### Prerequisites
 
-- `index.html` - Main HTML structure and navigation
-- `styles.css` - All styling and responsive design
-- `app.js` - SPA router, components, and functionality
-- `logo.png` - Custom bronco logo
-- `README.md` - This documentation
+- Node.js 18+ 
+- npm or yarn package manager
 
-## Browser Support
+### Installation
 
-This SPA works in all modern browsers and is optimized for mobile devices. The hash-based routing ensures compatibility with GitHub Pages static hosting.
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/BroncBotz3481/broncbotz3481.github.io.git
+cd broncbotz3481.github.io
+\`\`\`
 
-## Development
+2. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
 
-To add new pages:
-1. Add a new component function to the `components` object in `app.js`
-2. Add a navigation link to the header in `index.html`
-3. The router will automatically handle the new route
+3. Run the development server:
+\`\`\`bash
+npm run dev
+\`\`\`
 
-The application uses a simple but effective routing system that's perfect for GitHub Pages hosting while providing a modern SPA experience.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-# Run 
-- Run Prod (default):
-> docker-compose up --build
-- Run Dev (with hot reloads):
-> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+### Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build the application for production
+- `npm run start` - Start production server (requires build first)
+- `npm run export` - Export static files for deployment
+- `npm run lint` - Run ESLint for code quality
+
+## Project Structure
+
+\`\`\`
+├── app/                    # Next.js app directory
+├── components/            # React components
+│   ├── pages/            # Page components
+│   └── ui/               # Reusable UI components
+├── public/               # Static assets (images, logos, etc.)
+├── styles/               # CSS and styling files
+├── .github/workflows/    # GitHub Actions deployment workflow
+└── README.md            # This file
+\`\`\`
+
+## Contributing
+
+We welcome contributions from team members and the community! Here's how to get involved:
+
+### For Team Members
+
+1. **Content Updates**: Update team member information, robot details, or sponsor logos
+2. **Feature Requests**: Suggest new features or improvements
+3. **Bug Reports**: Report any issues you encounter
+
+### Making Changes
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and test locally
+4. Commit your changes: `git commit -m "Description of changes"`
+5. Push to your branch: `git push origin feature/your-feature-name`
+6. Create a Pull Request
+
+### Content Guidelines
+
+- **Images**: Optimize images for web use (WebP format preferred)
+- **Text**: Keep content concise and engaging
+- **Accessibility**: Ensure all content is accessible (alt text for images, proper headings)
+- **Branding**: Maintain consistent use of team colors and branding
+
+## Technical Details
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with custom components
+- **UI Components**: shadcn/ui component library
+- **Icons**: Lucide React icons
+- **Deployment**: GitHub Pages with GitHub Actions
+- **Domain**: Custom domain configured through GitHub Pages
+
+## Social Media
+
+Stay connected with BroncBotz:
+
+- **Instagram**: [@broncbotz](https://instagram.com/broncbotz)
+- **Facebook**: [facebook.com/Bronc.Botz](https://facebook.com/Bronc.Botz)
+- **YouTube**: [@BHSBroncBotz](https://youtube.com/@BHSBroncBotz)
+
+## Contact
+
+**BroncBotz Team 3481**  
+Brandeis High School  
+San Antonio, Texas
+
+For website issues or suggestions, please open an issue in this repository or contact the team through our website.
