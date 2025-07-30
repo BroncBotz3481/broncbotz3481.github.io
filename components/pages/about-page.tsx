@@ -1,156 +1,229 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, Target, Award, Heart, Lightbulb, Handshake, Instagram, Facebook, Youtube } from "lucide-react"
+import { Instagram, Facebook, Youtube, ExternalLink } from "lucide-react"
 
 export default function AboutPage() {
-  const values = [
-    {
-      icon: Target,
-      title: "Excellence",
-      description: "We strive for excellence in everything we do, from robot design to community outreach.",
-    },
-    {
-      icon: Users,
-      title: "Teamwork",
-      description: "Success comes through collaboration, communication, and supporting one another.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation",
-      description: "We embrace creative thinking and innovative solutions to complex challenges.",
-    },
-    {
-      icon: Heart,
-      title: "Passion",
-      description: "Our love for robotics and STEM drives us to push boundaries and inspire others.",
-    },
-    {
-      icon: Handshake,
-      title: "Gracious Professionalism",
-      description: "We compete with respect, helping others while pursuing victory with honor.",
-    },
-    {
-      icon: Award,
-      title: "Continuous Learning",
-      description: "Every challenge is an opportunity to grow, learn, and become better engineers and people.",
-    },
-  ]
-
   return (
-    <div className="space-y-10">
-      {/* Header Section */}
-      <section className="text-center space-y-4">
-        <Badge className="bg-orange-100 text-orange-800 border-orange-200 px-3 py-1">About BroncBotz</Badge>
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-800">Our Story</h1>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          For over 15 years, BroncBotz has been inspiring students to pursue careers in STEM through hands-on robotics
-          experience, mentorship, and community engagement.
-        </p>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="grid md:grid-cols-2 gap-6">
-        <Card className="border-orange-100 hover:shadow-md transition-all duration-200">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-xl text-orange-600">Our Mission</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-slate-600 leading-relaxed">
-              To inspire and prepare students to become the next generation of STEM leaders through competitive
-              robotics, hands-on learning, and community service. We believe in fostering innovation, creativity, and
-              technical excellence while building character and leadership skills.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-orange-100 hover:shadow-md transition-all duration-200">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-xl text-orange-600">Our Vision</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-slate-600 leading-relaxed">
-              To be a leading robotics program that transforms students into confident, capable, and compassionate
-              leaders who use their STEM skills to make a positive impact on their communities and the world.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Core Values */}
-      <section className="space-y-6">
-        <div className="text-center space-y-3">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Our Core Values</h2>
-          <p className="text-slate-600 max-w-xl mx-auto">
-            These values guide everything we do, from how we design our robots to how we interact with our community.
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
+      <div className="container mx-auto px-4 py-8">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent mb-4">
+            About BroncBotz
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are FRC Team 3481, the BroncBotz from Brandeis High School in San Antonio, Texas. Our mission is to
+            inspire young people to be science and technology leaders through engaging them in exciting mentor-based
+            programs that build science, engineering, and technology skills.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {values.map((value, index) => (
-            <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">
-              <CardHeader className="text-center pb-3">
-                <div className="inline-flex p-3 bg-orange-100 rounded-full mx-auto mb-2">
-                  <value.icon className="h-6 w-6 text-orange-600" />
+        {/* Mission & Vision Cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <Card className="border-2 border-orange-200 hover:border-orange-400 transition-colors">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-orange-600 mb-4">Our Mission</h2>
+              <p className="text-gray-700 leading-relaxed">
+                To inspire young people to be science and technology leaders and innovators by engaging them in exciting
+                mentor-based programs that build science, engineering, technology skills, as well as self-confidence,
+                communication, and leadership.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-blue-600 mb-4">Our Vision</h2>
+              <p className="text-gray-700 leading-relaxed">
+                To transform our culture by creating a world where science and technology are celebrated and where young
+                people dream of becoming science and technology leaders.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Team Values */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+            Our Values
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-orange-600">G</span>
                 </div>
-                <CardTitle className="text-lg text-slate-800">{value.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-slate-600 text-center text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold mb-2">Gracious Professionalism</h3>
+                <p className="text-gray-600">
+                  Competing with respect, kindness, and integrity while maintaining fierce competition.
+                </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
-      </section>
 
-      {/* Follow Us Section */}
-      <section className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-xl p-6 md:p-8">
-        <div className="text-center space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Follow Us!</h2>
-          <p className="text-slate-600 max-w-xl mx-auto">
-            Stay connected with BroncBotz and follow our robotics journey on social media.
-          </p>
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-blue-600">C</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Coopertition</h3>
+                <p className="text-gray-600">
+                  Displaying unqualified kindness and respect in the face of fierce competition.
+                </p>
+              </CardContent>
+            </Card>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
-            <a
-              href="https://instagram.com/broncbotz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
-            >
-              <div className="p-2 bg-white rounded-full shadow-sm">
-                <Instagram className="h-5 w-5" />
-              </div>
-              <span className="font-medium">@broncbotz</span>
-            </a>
-
-            <a
-              href="https://facebook.com/Bronc.Botz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
-            >
-              <div className="p-2 bg-white rounded-full shadow-sm">
-                <Facebook className="h-5 w-5" />
-              </div>
-              <span className="font-medium">facebook.com/Bronc.Botz</span>
-            </a>
-
-            <a
-              href="https://youtube.com/@BHSBroncBotz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-slate-700 hover:text-orange-600 transition-colors duration-200"
-            >
-              <div className="p-2 bg-white rounded-full shadow-sm">
-                <Youtube className="h-5 w-5" />
-              </div>
-              <span className="font-medium">@BHSBroncBotz</span>
-            </a>
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">I</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Innovation</h3>
+                <p className="text-gray-600">
+                  Pursuing creative and unique solutions to complex engineering challenges.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </section>
+
+        {/* Team Stats */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+            Team Statistics
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 mb-2">7+</div>
+              <div className="text-gray-600">Years Active</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">30+</div>
+              <div className="text-gray-600">Team Members</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 mb-2">50+</div>
+              <div className="text-gray-600">Competitions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
+              <div className="text-gray-600">Awards Won</div>
+            </div>
+          </div>
+        </div>
+
+        {/* What We Do */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+            What We Do
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4 text-orange-600">FIRST Robotics Competition</h3>
+                <p className="text-gray-700 mb-4">
+                  We design, build, and program robots to compete in the annual FIRST Robotics Competition. Each year
+                  brings a new game with unique challenges that test our engineering skills.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Robot Design</Badge>
+                  <Badge variant="secondary">Programming</Badge>
+                  <Badge variant="secondary">Strategy</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4 text-blue-600">Community Outreach</h3>
+                <p className="text-gray-700 mb-4">
+                  We actively engage with our community through STEM education programs, demonstrations, and mentoring
+                  younger students in robotics and engineering.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">STEM Education</Badge>
+                  <Badge variant="secondary">Mentoring</Badge>
+                  <Badge variant="secondary">Demonstrations</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="mb-12">
+          <Card className="bg-gradient-to-r from-orange-100 to-blue-100 border-2 border-orange-200">
+            <CardContent className="p-8 text-center">
+              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+                Follow Us!
+              </h2>
+              <p className="text-gray-700 mb-8 text-lg">
+                Stay connected with BroncBotz and follow our journey through the robotics season!
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/broncbotz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border-2 border-pink-200 hover:border-pink-400 group"
+                >
+                  <Instagram className="w-6 h-6 text-pink-600 group-hover:text-pink-700" />
+                  <span className="font-semibold text-gray-800 group-hover:text-pink-700">@broncbotz</span>
+                  <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-pink-700" />
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://facebook.com/Bronc.Botz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border-2 border-blue-200 hover:border-blue-400 group"
+                >
+                  <Facebook className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
+                  <span className="font-semibold text-gray-800 group-hover:text-blue-700">Bronc.Botz</span>
+                  <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-blue-700" />
+                </a>
+
+                {/* YouTube */}
+                <a
+                  href="https://youtube.com/@BHSBroncBotz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border-2 border-red-200 hover:border-red-400 group"
+                >
+                  <Youtube className="w-6 h-6 text-red-600 group-hover:text-red-700" />
+                  <span className="font-semibold text-gray-800 group-hover:text-red-700">@BHSBroncBotz</span>
+                  <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-red-700" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <Card className="bg-gradient-to-r from-orange-600 to-blue-600 text-white">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold mb-4">Join Our Team!</h2>
+              <p className="text-xl mb-6 opacity-90">
+                Interested in robotics, engineering, or making a difference? We'd love to have you join the BroncBotz
+                family!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   )
 }
