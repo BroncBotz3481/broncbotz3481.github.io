@@ -118,18 +118,35 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
             What We Do
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-orange-600">FIRST Robotics Competition</h3>
+                <h3 className="text-xl font-bold mb-4 text-orange-600">FIRST Robotics Competition (FRC)</h3>
                 <p className="text-gray-700 mb-4">
-                  We design, build, and program robots to compete in the annual FIRST Robotics Competition. Each year
-                  brings a new game with unique challenges that test our engineering skills.
+                  Team 3481 BroncBotz proudly competes in the annual FIRST Robotics Competition, where we design, build, and
+                  program industrial-scale robots to take on new, complex challenges each season. From mechanical design to
+                  advanced strategy, FRC pushes the boundaries of our technical and collaborative skills.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Robot Design</Badge>
                   <Badge variant="secondary">Programming</Badge>
-                  <Badge variant="secondary">Strategy</Badge>
+                  <Badge variant="secondary">Game Strategy</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4 text-orange-600">FIRST Tech Challenge (FTC)</h3>
+                <p className="text-gray-700 mb-4">
+                  BroncBotz includes FTC teams 4008, 6976, and 4602—each designing, building, and coding mid-sized robots to
+                  compete in the dynamic FIRST Tech Challenge. FTC offers a fast-paced, hands-on environment where we explore
+                  innovation, teamwork, and strategic thinking.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Engineering Design</Badge>
+                  <Badge variant="secondary">Java Programming</Badge>
+                  <Badge variant="secondary">Collaboration</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -138,13 +155,14 @@ export default function AboutPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-blue-600">Community Outreach</h3>
                 <p className="text-gray-700 mb-4">
-                  We actively engage with our community through STEM education programs, demonstrations, and mentoring
-                  younger students in robotics and engineering.
+                  Beyond the competition field, BroncBotz is committed to inspiring the next generation of innovators. We lead
+                  STEM outreach through hands-on workshops, robot demonstrations, and mentoring local youth in robotics and
+                  engineering.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">STEM Education</Badge>
-                  <Badge variant="secondary">Mentoring</Badge>
-                  <Badge variant="secondary">Demonstrations</Badge>
+                  <Badge variant="secondary">Mentorship</Badge>
+                  <Badge variant="secondary">Community Engagement</Badge>
                 </div>
               </CardContent>
             </Card>
