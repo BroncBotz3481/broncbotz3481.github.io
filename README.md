@@ -1,66 +1,75 @@
 # Bronc Botz SPA Website
 
-## Running Locally
+A modern Single Page Application (SPA) recreation of the BroncBotz robotics team website, designed for hosting on GitHub Pages.
 
-### Prerequisites
+## Features
 
-* [Node.js](https://nodejs.org/) (v16 or newer recommended)
-* [npm](https://www.npmjs.com/) (comes with Node.js)
+- **Single Page Application**: Smooth navigation without page reloads
+- **Responsive Design**: Works perfectly on all devices and screen sizes
+- **Interactive Carousel**: Showcases team photos and robots with navigation
+- **Multiple Pages**: Home, About, Team, Sponsors, and Contact sections
+- **Contact Form**: Functional contact form with validation
+- **Mobile Navigation**: Collapsible navigation menu for mobile devices
+- **Loading Animations**: Smooth transitions between pages
+- **GitHub Pages Ready**: All files optimized for static hosting
 
-### Steps
+## Pages
 
-1. Install dependencies:
+1. **Home** - Hero section with carousel and team overview
+2. **About** - Team history, mission, and achievements
+3. **Team** - Student leadership and subteam information
+4. **Sponsors** - Sponsor recognition and sponsorship opportunities
+5. **Contact** - Contact information and inquiry form
 
-```bash
-npm install
-```
+## Technical Features
 
-2. Run the development server with hot reload:
+- Hash-based routing for GitHub Pages compatibility
+- Modular component architecture
+- Vanilla JavaScript (no external dependencies)
+- CSS Grid and Flexbox for responsive layouts
+- Smooth page transitions and loading states
+- Mobile-first responsive design
+- Accessible navigation and forms
 
-```bash
-npm run dev
-```
+## Setup for GitHub Pages
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. Create a new repository on GitHub
+2. Upload all files to the repository
+3. Go to Settings > Pages
+4. Select "Deploy from a branch" and choose "main"
+5. Your site will be available at `https://yourusername.github.io/repository-name`
 
-4. To build and start the production server locally:
+## Customization
 
-```bash
-npm run build
-npm start
-```
+- Replace placeholder images with actual team photos
+- Update team member information and roles
+- Modify sponsor logos and information
+- Customize colors and styling in `styles.css`
+- Add new pages by extending the router in `app.js`
 
----
+## File Structure
 
-## Building and Exporting
+- `index.html` - Main HTML structure and navigation
+- `styles.css` - All styling and responsive design
+- `app.js` - SPA router, components, and functionality
+- `logo.png` - Custom bronco logo
+- `README.md` - This documentation
 
-Your project uses Next.js static export:
+## Browser Support
 
-* Build and export the static site with:
+This SPA works in all modern browsers and is optimized for mobile devices. The hash-based routing ensures compatibility with GitHub Pages static hosting.
 
-```bash
-npm run export
-```
+## Development
 
-This outputs static files to the `out` directory.
+To add new pages:
+1. Add a new component function to the `components` object in `app.js`
+2. Add a navigation link to the header in `index.html`
+3. The router will automatically handle the new route
 
----
+The application uses a simple but effective routing system that's perfect for GitHub Pages hosting while providing a modern SPA experience.
 
-## Deployment to GitHub Pages
-
-This project deploys to the `gh-pages` branch on GitHub.
-
-To deploy:
-
-```bash
-npm run deploy
-```
-
-This runs the `predeploy` script (`npm run build`) followed by deploying the `out` folder to the `gh-pages` branch using the `gh-pages` package.
-
----
-
-## Repository and URL
-
-* **GitHub repo:** [https://github.com/BroncBotz3481/broncbotz3481.github.io](https://github.com/BroncBotz3481/broncbotz3481.github.io)
-* **Live site:** [https://broncbotz.org](https://broncbotz.org)
+# Run 
+- Run Prod (default):
+> docker-compose up --build
+- Run Dev (with hot reloads):
+> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
