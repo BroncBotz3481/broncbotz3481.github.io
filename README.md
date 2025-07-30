@@ -54,20 +54,20 @@ The website is automatically deployed to GitHub Pages using GitHub Actions:
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone https://github.com/BroncBotz3481/broncbotz3481.github.io.git
 cd broncbotz3481.github.io
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Run the development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
@@ -81,7 +81,7 @@ npm run dev
 
 ## Project Structure
 
-\`\`\`
+```
 ├── app/                    # Next.js app directory
 ├── components/            # React components
 │   ├── pages/            # Page components
@@ -90,7 +90,7 @@ npm run dev
 ├── styles/               # CSS and styling files
 ├── .github/workflows/    # GitHub Actions deployment workflow
 └── README.md            # This file
-\`\`\`
+```
 
 ## Contributing
 
