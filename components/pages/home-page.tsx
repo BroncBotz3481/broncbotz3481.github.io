@@ -11,7 +11,7 @@ export default function HomePage() {
     {
       src: "/carousel/robot.jpg",
       alt: "BroncBotz robot competing in 2024 season",
-      caption: "Our 2024 CRESCENDO robot in action",
+      caption: "Our 2024 CRESCENDO robot in play",
     },
     {
       src: "/carousel/working.jpg",
@@ -21,12 +21,12 @@ export default function HomePage() {
     {
       src: "/carousel/winning.jpg",
       alt: "Team receiving award at competition",
-      caption: "Celebrating our regional championship",
+      caption: "Celebrating an Impact award win",
     },
     {
       src: "/carousel/building.jpg",
       alt: "Robot construction process",
-      caption: "Building our competition robot",
+      caption: "Building our 2018 competition robot",
     },
   ]
 

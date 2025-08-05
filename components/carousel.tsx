@@ -44,7 +44,7 @@ export default function Carousel({ images, autoPlay = true, autoPlayInterval = 5
   if (images.length === 0) return null
 
   return (
-    <div className="relative w-full h-80 overflow-hidden rounded-xl bg-slate-100 shadow-sm border border-orange-100">
+    <div className="relative w-full h-svh overflow-hidden rounded-xl bg-slate-100 shadow-sm border border-orange-100">
       {/* Images */}
       <div className="relative h-full">
         {images.map((image, index) => (

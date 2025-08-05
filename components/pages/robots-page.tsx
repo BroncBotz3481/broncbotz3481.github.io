@@ -24,7 +24,7 @@ const robots: Robot[] = [
     description: "TBD",
     achievements: ["TBD"],
     keyFeatures: ["TBD"],
-    image: "/robots/2026.png",
+    image: "/robots/2026.jpg",
   },
   {
     year: 2025,
@@ -33,7 +33,7 @@ const robots: Robot[] = [
     description: "Justice stands for power. Built to rise to any challenge.",
     achievements: ["TBD"],
     keyFeatures: ["TBD"],
-    image: "/robots/2025.png",
+    image: "/robots/2025.jpg",
   },
   {
     year: 2024,
@@ -43,7 +43,7 @@ const robots: Robot[] = [
         "Azula was built for CRESCENDO, a powerful scoring bot with elegant motion and effective endgame climbs.",
     achievements: ["Regional Finalist", "Engineering Inspiration Award"],
     keyFeatures: ["Precision shooter", "Climbing mechanism", "Autonomous navigation"],
-    image: "/robots/2024.png",
+    image: "/robots/2024.jpg",
   },
   {
     year: 2023,
@@ -53,7 +53,7 @@ const robots: Robot[] = [
         "Built for the CHARGED UP challenge, this robot excelled at manipulating cones and cubes with precision.",
     achievements: ["Regional Champions", "Innovation in Control Award"],
     keyFeatures: ["Arm"],
-    image: "/robots/2023.png",
+    image: "/robots/2023.jpg",
   },
   {
     year: 2022,
@@ -63,7 +63,7 @@ const robots: Robot[] = [
         "Our RAPID REACT robot featured a high-speed ball shooter and an efficient climbing system.",
     achievements: ["Regional Semi-Finalist"],
     keyFeatures: ["High-speed shooter", "Pneumatic climber"],
-    image: "/robots/2022.png",
+    image: "/robots/2022.jpg",
   },
   {
     year: 2021,
@@ -73,7 +73,7 @@ const robots: Robot[] = [
         "Flashback tackled the unique challenges of the 2021 replay season with a sleek design and strong scoring capabilities.",
     achievements: ["Shutdown Short Season"],
     keyFeatures: ["Power cell shooter", "Climbing arms"],
-    image: "/robots/2021.png",
+    image: "/robots/2021.jpg",
   },
   {
     year: 2020,
@@ -83,7 +83,7 @@ const robots: Robot[] = [
         "Due to COVID-19, the season was cut short, but Biohazard was built with strong scoring potential for INFINITE RECHARGE.",
     achievements: ["Shutdown Short Season"],
     keyFeatures: ["Power cell shooter"],
-    image: "/robots/2020.png",
+    image: "/robots/2020.jpg",
   },
   {
     year: 2019,
@@ -93,7 +93,7 @@ const robots: Robot[] = [
         "Andromeda was designed for cargo and hatch manipulation under sandstorm conditions.",
     achievements: ["Team Spirit Award"],
     keyFeatures: ["Cargo intake", "Hatch panel claws", "Climb"], // what level climb?
-    image: "/robots/2019.png",
+    image: "/robots/2019.jpg",
   },
   {
     year: 2018,
@@ -103,7 +103,7 @@ const robots: Robot[] = [
         "Built for POWER UP, El Alacrán featured power cube manipulation and scale/switch scoring.",
     achievements: ["Regional Quarterfinalist", "Safety Award"],
     keyFeatures: ["Power cube intake", "Elevator lift", "Scale scoring"],
-    image: "/robots/2018.png",
+    image: "/robots/2018.jpg",
   },
   {
     year: 2017,
@@ -113,7 +113,7 @@ const robots: Robot[] = [
         "Orange Juice specialized in gear delivery and low-goal fuel scoring during the STEAMWORKS season.",
     achievements: ["Team Autonomous Improvements", "Design Recognition"],
     keyFeatures: ["Gear handler", "Low-goal shooter", "Active intake"],
-    image: "/robots/2017.png",
+    image: "/robots/2017.jpg",
   },
   {
     year: 2016,
@@ -123,7 +123,7 @@ const robots: Robot[] = [
         "Our robot for FIRST STRONGHOLD was equipped for defense crossing and tower shooting.",
     achievements: ["Award for Creative Design"],
     keyFeatures: ["Strong drivetrain", "High goal shooter", "Defense breaching"],
-    image: "/robots/2016.png",
+    image: "/robots/2016.jpg",
   },
   {
     year: 2015,
@@ -133,7 +133,7 @@ const robots: Robot[] = [
         "El Toro was built for RECYCLE RUSH, focusing on stacking totes and managing recycling containers.",
     achievements: ["Consistent Scoring Performance"],
     keyFeatures: ["Tote stacker", "Can grabber", "H-drive"],
-    image: "/robots/2015.png",
+    image: "/robots/2015.jpg",
   },
   {
     year: 2014,
@@ -143,7 +143,7 @@ const robots: Robot[] = [
         "Competed in AERIAL ASSIST, focusing on cooperative ball passing and robust defense.",
     achievements: ["Strong Defensive Play"],
     keyFeatures: ["Large ball intake", "2-ball Auton", "Robust frame"],
-    image: "/robots/2014.png",
+    image: "/robots/2014.jpg",
   },
   {
     year: 2013,
@@ -153,7 +153,7 @@ const robots: Robot[] = [
         "Designed for ULTIMATE ASCENT, Twister focused on quick disc shooting and moderate climbing ability.",
     achievements: ["High Autonomous Accuracy"],
     keyFeatures: ["Frisbee shooter", "Climbing hooks", "Autonomous routine"],
-    image: "/robots/2013.png",
+    image: "/robots/2013.jpg",
   },
   {
     year: 2012,
@@ -163,7 +163,7 @@ const robots: Robot[] = [
         "A basketball-shooting robot created for Rebound Rumble, featuring improved drivetrain control.",
     achievements: ["Improved Scoring", "Team Growth"],
     keyFeatures: ["Ball shooter", "Improved drivebase", "Feeder system"],
-    image: "/robots/2012.png",
+    image: "/robots/2012.jpg",
   },
   {
     year: 2011,
@@ -173,7 +173,7 @@ const robots: Robot[] = [
         "Our first robot, built for the LOGO MOTION challenge, featured simple tube handling capabilities.",
     achievements: ["Rookie Year", "Completed Qualification Rounds"],
     keyFeatures: ["Basic arm", "Tube gripper", "Rolling drivetrain"],
-    image: "/robots/2011.png",
+    image: "/robots/2011.jpg",
   },
 ];
 
