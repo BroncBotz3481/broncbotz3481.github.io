@@ -317,7 +317,7 @@ export default function RobotsPage() {
               <img
                 src={selectedRobot.image || "/placeholder.svg"}
                 alt={`${selectedRobot.year} ${selectedRobot.gameName} Robot`}
-                className="w-full h-64 object-cover rounded-t-xl"
+                className="w-full object-cover rounded-t-xl"
               />
               <button
                 onClick={closeModal}
