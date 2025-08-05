@@ -170,6 +170,16 @@ export default function SponsorsPage() {
         </p>
       </section>
 
+      <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 text-sm text-slate-800 shadow-sm">
+        <p className="mb-2">
+          Want to support our <strong>3481 BroncBotz</strong> robotics team? We're a registered non-profit, and many companies—like <strong>USAA</strong>—will match your donation!
+        </p>
+        <p className="mb-2">
+          You can find us on <strong>Benevity</strong>. If you have any questions, feel free to reach out.
+        </p>
+        <p className="font-semibold text-orange-700">We truly appreciate your support!</p>
+      </div>
+
       {/* Impact Statistics */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {impactStats.map((stat, index) => (
@@ -205,21 +215,6 @@ export default function SponsorsPage() {
                   />
                 </div>
                 <CardTitle className="text-lg text-slate-800">{sponsor.name}</CardTitle>
-                <CardDescription>
-                  {/*<Badge*/}
-                  {/*  className={*/}
-                  {/*    sponsor.tier === "Platinum"*/}
-                  {/*      ? "bg-slate-100 text-slate-800 border-slate-200"*/}
-                  {/*      : sponsor.tier === "Gold"*/}
-                  {/*        ? "bg-yellow-100 text-yellow-800 border-yellow-200"*/}
-                  {/*        : sponsor.tier === "Silver"*/}
-                  {/*          ? "bg-gray-100 text-gray-800 border-gray-200"*/}
-                  {/*          : "bg-orange-100 text-orange-800 border-orange-200"*/}
-                  {/*  }*/}
-                  {/*>*/}
-                  {/*  {sponsor.tier} Sponsor*/}
-                  {/*</Badge>*/}
-                </CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-0">
                 <p className="text-slate-600 mb-3 text-sm">{sponsor.description}</p>
@@ -247,30 +242,6 @@ export default function SponsorsPage() {
             your organization.
           </p>
         </div>
-
-        {/*<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">*/}
-        {/*  {sponsorTiers.map((tier, index) => (*/}
-        {/*    <Card key={index} className="border-orange-100 hover:shadow-md transition-all duration-200">*/}
-        {/*      <CardHeader className="text-center pb-3">*/}
-        {/*        <div className={`inline-flex p-3 rounded-full ${tier.color} mb-3`}>*/}
-        {/*          <tier.icon className="h-6 w-6" />*/}
-        {/*        </div>*/}
-        {/*        <CardTitle className="text-xl text-slate-800">{tier.tier}</CardTitle>*/}
-        {/*        <CardDescription className="text-lg font-bold text-orange-600">{tier.amount}</CardDescription>*/}
-        {/*      </CardHeader>*/}
-        {/*      <CardContent className="space-y-3 pt-0">*/}
-        {/*        <ul className="space-y-1">*/}
-        {/*          {tier.benefits.map((benefit, benefitIndex) => (*/}
-        {/*            <li key={benefitIndex} className="flex items-start space-x-2 text-xs">*/}
-        {/*              <div className="w-1 h-1 bg-orange-600 rounded-full mt-1.5 flex-shrink-0"></div>*/}
-        {/*              <span className="text-slate-600">{benefit}</span>*/}
-        {/*            </li>*/}
-        {/*          ))}*/}
-        {/*        </ul>*/}
-        {/*      </CardContent>*/}
-        {/*    </Card>*/}
-        {/*  ))}*/}
-        {/*</div>*/}
       </section>
 
       {/* Why Sponsor Us */}
