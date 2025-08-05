@@ -9,22 +9,22 @@ import { Award, Puzzle, ChevronRight, Users, Trophy, Wrench, Calendar, Lightbulb
 export default function HomePage() {
   const carouselImages = [
     {
-      src: "/placeholder.svg?height=400&width=800&text=Robot+Competition+2024",
+      src: "/carousel/robot.jpg",
       alt: "BroncBotz robot competing in 2024 season",
       caption: "Our 2024 CRESCENDO robot in action",
     },
     {
-      src: "/placeholder.svg?height=400&width=800&text=Team+Workshop",
+      src: "/carousel/working.jpg",
       alt: "Team members working in the workshop",
       caption: "Students collaborating in our workshop",
     },
     {
-      src: "/placeholder.svg?height=400&width=800&text=Award+Ceremony",
+      src: "/carousel/winning.jpg",
       alt: "Team receiving award at competition",
       caption: "Celebrating our regional championship",
     },
     {
-      src: "/placeholder.svg?height=400&width=800&text=Robot+Build",
+      src: "/carousel/building.jpg",
       alt: "Robot construction process",
       caption: "Building our competition robot",
     },
