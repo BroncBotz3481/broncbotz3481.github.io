@@ -180,6 +180,14 @@ export default function SponsorsPage() {
         <p className="font-semibold text-orange-700">We truly appreciate your support!</p>
       </div>
 
+      <iframe
+          src="https://hcb.hackclub.com/donations/start/frc-3481-broncbotz"
+          name="donateFrame"
+          height="512px"
+          class="w-full"
+          allowfullscreen>
+      </iframe>
+
       {/* Impact Statistics */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {impactStats.map((stat, index) => (
